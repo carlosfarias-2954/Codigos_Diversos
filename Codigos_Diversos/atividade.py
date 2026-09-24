@@ -2,6 +2,13 @@ print("======================================")
 print("       CALCULADORA DE MATRIZES")
 print("======================================")
 
+def converter_valor(valor):
+    if "/" in valor:
+        numerador, denominador = valor.split("/")
+        return float(numerador) / float(denominador)
+    else:
+        return float(valor)
+
 def criar_matriz(nome):
     linhas = int(input(f"\nDigite o número de linhas da matriz {nome}: "))
     colunas = int(input(f"Digite o número de colunas da matriz {nome}: "))
@@ -12,8 +19,10 @@ def criar_matriz(nome):
     
     for i in range(linhas):
         linha = []
+
         for j in range(colunas):
-            valor = float(input(f"Digite o valor [{i+1}][{j+1}]: "))
+            entrada = input(f"Digite o valor [{i+1}][{j+1}]: ")
+            valor = converter_valor(entrada)
             linha.append(valor)
         matriz.append(linha)
 
@@ -33,7 +42,6 @@ def soma(A, B):
         for j in range(len(A[0])):
             linha.append(A[i][j] + B[i][j])
         resultado.append(linha)
-
     return resultado
 
 def subtracao(A, B):
@@ -44,7 +52,6 @@ def subtracao(A, B):
         for j in range(len(A[0])):
             linha.append(A[i][j] - B[i][j])
         resultado.append(linha)
-
     return resultado
 
 def multiplicacao(A, B):
@@ -52,30 +59,21 @@ def multiplicacao(A, B):
 
     for i in range(len(A)):
         linha = []
-
         for j in range(len(B[0])):
             soma = 0
-
             for k in range(len(B)):
                 soma += A[i][k] * B[k][j]
-
             linha.append(soma)
-
         resultado.append(linha)
-
     return resultado
 
 def multiplicacao_escalar(A, escalar):
     resultado = []
-
     for i in range(len(A)):
         linha = []
-
         for j in range(len(A[0])):
             linha.append(A[i][j] * escalar)
-
         resultado.append(linha)
-
     return resultado
 
 A = criar_matriz("A")
@@ -140,15 +138,12 @@ while True:
         if len(A[0]) == len(B):
 
             resultado = multiplicacao(A, B)
-
             print("\nResultado de A x B:")
             mostrar_matriz(resultado)
-
         else:
             print("\nNão é possível realizar a multiplicação.")
             print("O número de colunas da matriz A")
             print("deve ser igual ao número de linhas da matriz B.")
-
     elif opcao == 4:
 
         escalar = float(input("\nDigite o valor do escalar: "))
@@ -171,6 +166,5 @@ while True:
 
         print("\nPrograma encerrado.")
         break
-
     else:
         print("\nOpção inválida!")
