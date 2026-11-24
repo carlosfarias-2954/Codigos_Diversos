@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulários - Atividade Avaliativa 04</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 30px 50px; }
+h1 { text-align: center; }
+form { max-width: 650px; margin: 25px auto; border: 1px solid #000; padding: 20px; }
+fieldset { margin-bottom: 20px; }
+label { display: inline-block; margin: 8px 0; }
+input, select, textarea { margin: 5px; padding: 6px; }
+textarea { width: 95%; height: 90px; }
+</style>
+</head>
+<body>
+
+<h1>Formulários</h1>
+
+<form action="#" method="post">
+<fieldset>
+<legend>DESENVOLVIMENTO DE INTERFACE</legend>
+
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome"><br>
+
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email"><br>
+
+<label for="curso">Curso:</label>
+<select id="curso" name="curso">
+    <option>ADS</option>
+    <option>Ciência da Computação</option>
+    <option>Ciência de Dados</option>
+</select><br>
+
+<label>Turno:</label>
+<input type="radio" id="manha" name="turno" value="manha">
+<label for="manha">Manhã</label>
+<input type="radio" id="noite" name="turno" value="noite">
+<label for="noite">Noite</label><br>
+
+<label for="observacao">Observações:</label><br>
+<textarea id="observacao" name="observacao"></textarea><br>
+
+<input type="submit" value="Enviar">
+<input type="reset" value="Limpar">
+</fieldset>
+</form>
+
+<!-- O segundo formulário não pôde ser reproduzido fielmente porque
+     seu modelo visual não veio no texto enviado. -->
+
+<h2>Formulário 2</h2>
+<form action="#" method="post">
+<fieldset>
+<legend>Formulário 2</legend>
+<label for="campo">Informação:</label>
+<input type="text" id="campo" name="campo"><br>
+<input type="submit" value="Enviar">
+<input type="reset" value="Limpar">
+</fieldset>
+</form>
+
+<a href="tabelas.html">Voltar para as tabelas</a>
+<a href="index.html">Voltar para a página principal</a>
+
+</body>
+</html>

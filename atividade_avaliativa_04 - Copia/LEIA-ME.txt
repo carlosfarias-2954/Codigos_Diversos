@@ -1,0 +1,19 @@
+ATIVIDADE AVALIATIVA 04
+Desenvolvimento Web - A
+
+Arquivos:
+- index.html       -> página principal (questões 1 a 20)
+- tabelas.html     -> página das tabelas (questão 21)
+- formularios.html -> página dos formulários (questão 22)
+
+IMPORTANTE:
+O enunciado enviado em texto não contém as imagens/modelos visuais das tabelas
+e dos dois formulários. Por isso, foram criadas estruturas-base. Para reproduzir
+EXATAMENTE o que o professor mostrou, envie os prints/fotos dessas partes.
+
+Antes de entregar:
+1. Abra index.html no navegador.
+2. Troque "SEU NOME COMPLETO" pelo seu nome.
+3. Confira os links entre as páginas.
+4. Substitua as tabelas e formulários-base pelos modelos da atividade, se necessário.
+5. Compacte os três HTMLs em um .zip ou envie o arquivo solicitado pelo Moodle.
